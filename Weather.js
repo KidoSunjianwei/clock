@@ -1,7 +1,7 @@
 class Weather {
     state = {
-        positionApi: 'http://www.nmc.cn/rest/position',
-        weatherApi: 'http://www.nmc.cn/rest/weather',
+        positionApi: 'https://www.nmc.cn/rest/position',
+        weatherApi: 'https://www.nmc.cn/rest/weather',
         data: null
     }
     timeStamp = () => new Date().getTime()
