@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+
+    <script src="./utils.js"></script>
+    <script src="./Time.js"></script>
+    <script src="./Weather.js"></script>
+    <script src="./RadioBroad.js"></script>
+    <title>Kindle天气时钟</title>
+</head>
+
+<body>
+    <div id="root">
+        <div id="datetime"></div>
+        <div id="weather"></div>
+        <div id="radioBroad"></div>
+    </div>
+    <script type="text/javascript">
+        let timer
+        function generateRadioBroad() {
+            // 谚语
+            const myRadioBroad = new RadioBroad()
+            myRadioBroad.componentDidMount((template) => {
+                document.getElementById('radioBroad').innerHTML = template
+            })
+        }
+        function createApp() {
+            const myTime = new Time()
+            const myWeather = new Weather()
+            // 天气
+            myWeather.componentDidMount((template) => {
+                document.getElementById('weather').innerHTML = template
+            })
+            // 时间
+            myTime.componentDidMount((template) => {
+                document.getElementById('datetime').innerHTML = template
+            })
+            generateRadioBroad()
+        }
+        clearInterval(timer)
+        timer = setInterval(() => {
+            createApp()
+        }, 1 * 60 * 60 * 1000)
+
+        window.onload = createApp
+
+    </script>
+</body>
+
+</html>

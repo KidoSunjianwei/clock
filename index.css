@@ -1,0 +1,54 @@
+
+@font-face {
+    font-family: "digital";
+    src: url("./digital-7-4.ttf");
+  }
+@font-face {
+    font-family: "PUTHIAfont";
+    src: url("./PUTHIAfont.ttf");
+}
+@media screen and (min-width:1400px) {
+    #root{
+        padding-top:10rem;
+    }
+    .time-wrap .time{
+        font-size: 15rem !important;
+    }
+    .weather-wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .weather-wrap .divider{
+        width:60rem !important;
+    }
+}
+body{
+    text-align: center;
+    background-color: black !important;
+    color:white !important;
+}
+
+.time-wrap .date-week{
+    font-family:PUTHIAfont, digital;
+}
+.time-wrap .time{
+    font-size: 5rem;
+    font-family:PUTHIAfont, digital;
+    background: black;
+    color: white;
+    margin:20px !important;
+    cursor: pointer;
+}
+.weather-wrap .temperature,.wind{
+    display: inline-block;
+    font-size: 28px;
+}
+.weather-wrap .divider {
+    height: 1px;
+    background:#b3b2b2;
+    margin:20px ;
+}
+.weather-wrap .split-line{
+    margin:0 20px;
+}
