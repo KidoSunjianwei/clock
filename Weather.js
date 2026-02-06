@@ -1,9 +1,7 @@
 class Weather {
     state = {
-        // 原地址：https://www.nmc.cn/rest/position
-        positionApi: 'https://proxy.cors.sh/https://www.nmc.cn/rest/position',
-        // 原地址：https://www.nmc.cn/rest/weather
-        weatherApi: 'https://proxy.cors.sh/https://www.nmc.cn/rest/weather',
+        positionApi: 'https://cors-anywhere.herokuapp.com/https://www.nmc.cn/rest/position',
+        weatherApi: 'https://cors-anywhere.herokuapp.com/https://www.nmc.cn/rest/weather',
         data: null
     }
     timeStamp = () => new Date().getTime()
